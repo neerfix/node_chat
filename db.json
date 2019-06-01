@@ -1,0 +1,26 @@
+{
+  "discussion": [
+    {
+      "id": 1,
+      "pseudo": "Tous les clients",
+      "all": true
+    },
+    {
+      "id": "LZLHkpqMS0lHqhfjAAAf",
+      "pseudo": "Michel",
+      "all": false
+    }
+  ],
+  "messages": [
+    {
+      "discussion_id": 1,
+      "users": "all",
+      "body": "Bonjour, bienvenue sur le site de michel"
+    },
+    {
+      "discussion_id": "LZLHkpqMS0lHqhfjAAAf",
+      "users": "Michel",
+      "body": "Hey Michel !"
+    }
+  ]
+}

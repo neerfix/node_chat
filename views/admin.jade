@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Super Chat temps réel !
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.2/css/all.css", integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay", crossorigin="anonymous")
+    link(rel="stylesheet", href="./style")
+  body
+    script.
+        onKeyPress="if (event.keyCode == 13) validateForm()"
+    div.container-admin.d-flex
+        div.col-3.list-client
+            ul#client.d-flex.flex-column
+                h2 Listes des discutions
+                li.order-1#openchat(data-id='1') Tous les clients
+        div.col-9.discussion
+            div.chat-header
+                h2#header Tous les clients
+            div.chat#zone_chat
+            form#formulaire_chat.chat-footer(action='/', method='post')
+                div.form-group.d-flex
+                    input#message.form-control.flex-5(type='text', name='message', placeholder='Votre message...', size='50', autofocus='', autocomplete="off")
+                    input#envoi_message.btn.btn-primary(type='submit', value='Send')
+
+    script(src='http://code.jquery.com/jquery-1.10.1.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src="/adminjs")
